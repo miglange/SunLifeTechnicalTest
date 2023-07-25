@@ -27,18 +27,6 @@
     // method used to update Account field
     @AuraEnabled
     public static void updateAccountField(String recordId, String fieldName, String fieldValue) {
-        // Get the SObjectType of the Account
-        SObjectType accountType = Schema.getGlobalDescribe().get('Account');
-        // Get the fields map for the Account
-        Map<String, SObjectField> accountFieldsMap = accountType.getDescribe().fields.getMap();
-
-        // Check if the field is editable for the user
-        if (accountFieldsMap.containsKey(fieldName) && accountFieldsMap.get(fieldName).getDescribe().isUpdateable()) {
-            Account accountToUpdate = new Account(Id = recordId);
-            accountToUpdate.put(fieldName, fieldValue);
-            update accountToUpdate;
-        } else {
-            throw new AuraHandledException('No permission to edit this field.');
-        }
+        
     }
 }
