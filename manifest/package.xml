@@ -5,6 +5,14 @@
         <name>FlexiPage</name>
     </types>
     <types>
+        <members>Financial Account Listing</members>
+        <name>Profile</name>
+    </types>
+    <types>
+        <members>Account</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
         <members>*</members>
         <name>ApexClass</name>
     </types>

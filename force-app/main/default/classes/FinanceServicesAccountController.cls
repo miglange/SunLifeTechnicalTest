@@ -6,7 +6,7 @@
  * filter the result by account name and sort it by account owner
  */
 
-public with sharing class FinanceServicesAccountController {
+ public with sharing class FinanceServicesAccountController {
     @AuraEnabled
     public static List<Account> getFinanceServicesAccounts(String accountNameFilter, String sortBy) {
         String vListAcct = 'SELECT Name, Owner.Name, Phone, Website, AnnualRevenue FROM Account WHERE Industry = \'Financial Services\'';
