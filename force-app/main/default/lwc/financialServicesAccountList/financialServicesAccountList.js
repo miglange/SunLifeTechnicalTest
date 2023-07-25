@@ -61,7 +61,7 @@ export default class FinancialServicesAccountList extends NavigationMixin(Lightn
             type: 'standard__recordPage',
             attributes: {
                 recordId: accountId,
-                actionName: 'view'
+                actionName: 'Edit'
             }
         }, { target: '_blank' });
     }
